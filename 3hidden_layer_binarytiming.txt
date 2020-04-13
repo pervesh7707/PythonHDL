@@ -1,0 +1,82 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Mon Apr 13 10:03:36 2020
+| Host         : nanodc7 running 64-bit unknown
+| Command      : report_timing
+| Design       : myproject
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 grp_compute_layer_0_0_0_s_fu_165/mult_256_V_reg_4587_reg[0]/C
+                            (rising edge-triggered cell FDRE)
+  Destination:            logits7_16_V_reg_4076_reg[15]_inv/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        13.634ns  (logic 6.589ns (48.328%)  route 7.045ns (51.672%))
+  Logic Levels:           19  (CARRY4=9 FDRE=1 LUT1=1 LUT2=2 LUT3=4 LUT4=1 LUT5=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         FDRE                         0.000     0.000 r  grp_compute_layer_0_0_0_s_fu_165/mult_256_V_reg_4587_reg[0]/C
+                         FDRE (Prop_fdre_C_Q)         0.456     0.456 r  grp_compute_layer_0_0_0_s_fu_165/mult_256_V_reg_4587_reg[0]/Q
+                         net (fo=14, unplaced)        0.792     1.248    grp_compute_layer_0_0_0_s_fu_165/mult_256_V_reg_4587[0]
+                         LUT3 (Prop_lut3_I0_O)        0.295     1.543 r  grp_compute_layer_0_0_0_s_fu_165/ap_return_31_int_reg[11]_i_57__0/O
+                         net (fo=2, unplaced)         0.650     2.193    grp_compute_layer_0_0_0_s_fu_165/ap_return_31_int_reg[11]_i_57__0_n_0
+                         CARRY4 (Prop_carry4_DI[1]_O[3])
+                                                      0.614     2.807 r  grp_compute_layer_0_0_0_s_fu_165/ap_return_31_int_reg_reg[11]_i_40__0/O[3]
+                         net (fo=5, unplaced)         0.646     3.453    p_189_in[3]
+                         LUT1 (Prop_lut1_I0_O)        0.307     3.760 r  ap_return_13_int_reg[15]_i_254__0/O
+                         net (fo=1, unplaced)         0.000     3.760    ap_return_13_int_reg[15]_i_254__0_n_0
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     4.161 r  ap_return_13_int_reg_reg[15]_i_235/CO[3]
+                         net (fo=1, unplaced)         0.009     4.170    ap_return_13_int_reg_reg[15]_i_235_n_0
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.235     4.405 r  ap_return_13_int_reg_reg[15]_i_234/O[0]
+                         net (fo=2, unplaced)         0.322     4.727    grp_compute_layer_0_0_0_s_fu_165/ap_return_13_int_reg_reg[15]_i_182_0[0]
+                         LUT2 (Prop_lut2_I0_O)        0.295     5.022 r  grp_compute_layer_0_0_0_s_fu_165/ap_return_13_int_reg[15]_i_219/O
+                         net (fo=2, unplaced)         0.650     5.672    grp_compute_layer_0_0_0_s_fu_165/ap_return_13_int_reg[15]_i_219_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.507     6.179 r  grp_compute_layer_0_0_0_s_fu_165/ap_return_13_int_reg_reg[15]_i_182/CO[3]
+                         net (fo=1, unplaced)         0.000     6.179    grp_compute_layer_0_0_0_s_fu_165/ap_return_13_int_reg_reg[15]_i_182_n_0
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.235     6.414 r  grp_compute_layer_0_0_0_s_fu_165/ap_return_13_int_reg_reg[15]_i_180/O[0]
+                         net (fo=4, unplaced)         0.335     6.749    grp_compute_layer_0_0_0_s_fu_165/p_196_in[8]
+                         LUT3 (Prop_lut3_I1_O)        0.295     7.044 r  grp_compute_layer_0_0_0_s_fu_165/ap_return_16_int_reg[15]_i_122__0/O
+                         net (fo=2, unplaced)         0.650     7.694    grp_compute_layer_0_0_0_s_fu_165/ap_return_16_int_reg[15]_i_122__0_n_0
+                         CARRY4 (Prop_carry4_DI[1]_O[2])
+                                                      0.554     8.248 r  grp_compute_layer_0_0_0_s_fu_165/ap_return_16_int_reg_reg[15]_i_90__0/O[2]
+                         net (fo=2, unplaced)         0.463     8.711    grp_compute_layer_0_0_0_s_fu_165/ap_return_16_int_reg_reg[15]_i_90__0_n_5
+                         LUT2 (Prop_lut2_I0_O)        0.301     9.012 r  grp_compute_layer_0_0_0_s_fu_165/ap_return_16_int_reg[15]_i_67__0/O
+                         net (fo=2, unplaced)         0.460     9.472    grp_compute_layer_0_0_0_s_fu_165/ap_return_16_int_reg[15]_i_67__0_n_0
+                         LUT4 (Prop_lut4_I3_O)        0.124     9.596 r  grp_compute_layer_0_0_0_s_fu_165/ap_return_16_int_reg[15]_i_71__0/O
+                         net (fo=1, unplaced)         0.000     9.596    grp_compute_layer_0_0_0_s_fu_165/ap_return_16_int_reg[15]_i_71__0_n_0
+                         CARRY4 (Prop_carry4_S[3]_CO[3])
+                                                      0.401     9.997 r  grp_compute_layer_0_0_0_s_fu_165/ap_return_16_int_reg_reg[15]_i_17/CO[3]
+                         net (fo=1, unplaced)         0.000     9.997    grp_compute_layer_0_0_0_s_fu_165/ap_return_16_int_reg_reg[15]_i_17_n_0
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.235    10.232 r  grp_compute_layer_0_0_0_s_fu_165/ap_return_16_int_reg_reg[15]_i_13/O[0]
+                         net (fo=3, unplaced)         0.329    10.561    grp_compute_layer_0_0_0_s_fu_165/ap_return_16_int_reg_reg[15]_i_13_n_7
+                         LUT3 (Prop_lut3_I1_O)        0.295    10.856 r  grp_compute_layer_0_0_0_s_fu_165/ap_return_16_int_reg[15]_i_14/O
+                         net (fo=2, unplaced)         0.460    11.316    grp_compute_layer_0_0_0_s_fu_165/ap_return_16_int_reg[15]_i_14_n_0
+                         LUT5 (Prop_lut5_I1_O)        0.124    11.440 r  grp_compute_layer_0_0_0_s_fu_165/ap_return_16_int_reg[15]_i_3__0/O
+                         net (fo=2, unplaced)         0.650    12.090    grp_compute_layer_0_0_0_s_fu_165/ap_return_16_int_reg[15]_i_3__0_n_0
+                         CARRY4 (Prop_carry4_DI[1]_O[3])
+                                                      0.614    12.704 f  grp_compute_layer_0_0_0_s_fu_165/ap_return_16_int_reg_reg[15]_i_1__0/O[3]
+                         net (fo=2, unplaced)         0.629    13.333    grp_compute_layer_0_0_0_s_fu_165/add_ln703_1702_fu_2964_p2[15]
+                         LUT3 (Prop_lut3_I0_O)        0.301    13.634 r  grp_compute_layer_0_0_0_s_fu_165/logits7_16_V_reg_4076[15]_inv_i_1/O
+                         net (fo=1, unplaced)         0.000    13.634    grp_compute_layer_0_0_0_s_fu_165_ap_return_16[15]
+                         FDRE                                         r  logits7_16_V_reg_4076_reg[15]_inv/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+

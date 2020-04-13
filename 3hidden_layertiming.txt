@@ -1,0 +1,45 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Mon Apr 13 09:39:46 2020
+| Host         : nanodc7 running 64-bit unknown
+| Command      : report_timing
+| Design       : myproject
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 ap_start
+                            (input port)
+  Destination:            ap_idle
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.774ns  (logic 3.756ns (65.045%)  route 2.018ns (34.955%))
+  Logic Levels:           4  (IBUF=1 LUT4=1 LUT6=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  ap_start (IN)
+                         net (fo=0)                   0.000     0.000    ap_start
+                         IBUF (Prop_ibuf_I_O)         0.923     0.923 f  ap_start_IBUF_inst/O
+                         net (fo=6, unplaced)         0.800     1.722    ap_start_IBUF
+                         LUT6 (Prop_lut6_I4_O)        0.124     1.846 r  ap_idle_OBUF_inst_i_2/O
+                         net (fo=1, unplaced)         0.419     2.265    ap_idle_OBUF_inst_i_2_n_0
+                         LUT4 (Prop_lut4_I0_O)        0.124     2.389 r  ap_idle_OBUF_inst_i_1/O
+                         net (fo=1, unplaced)         0.800     3.189    ap_idle_OBUF
+                         OBUF (Prop_obuf_I_O)         2.585     5.774 r  ap_idle_OBUF_inst/O
+                         net (fo=0)                   0.000     5.774    ap_idle
+                                                                      r  ap_idle (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+

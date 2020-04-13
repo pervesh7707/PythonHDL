@@ -1,0 +1,43 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (lin64) Build 2708876 Wed Nov  6 21:39:14 MST 2019
+| Date         : Mon Apr 13 08:57:26 2020
+| Host         : nanodc7 running 64-bit unknown
+| Command      : report_timing
+| Design       : myproject
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.23 2018-06-13
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 ap_start
+                            (input port)
+  Destination:            ap_idle
+                            (output port)
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        5.259ns  (logic 3.660ns (69.589%)  route 1.599ns (30.411%))
+  Logic Levels:           3  (IBUF=1 LUT4=1 OBUF=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                                                      0.000     0.000 f  ap_start (IN)
+                         net (fo=0)                   0.000     0.000    ap_start
+                         IBUF (Prop_ibuf_I_O)         0.923     0.923 f  ap_start_IBUF_inst/O
+                         net (fo=9, unplaced)         0.800     1.722    ap_start_IBUF
+                         LUT4 (Prop_lut4_I0_O)        0.152     1.874 r  ap_idle_OBUF_inst_i_1/O
+                         net (fo=1, unplaced)         0.800     2.674    ap_idle_OBUF
+                         OBUF (Prop_obuf_I_O)         2.585     5.259 r  ap_idle_OBUF_inst/O
+                         net (fo=0)                   0.000     5.259    ap_idle
+                                                                      r  ap_idle (OUT)
+  -------------------------------------------------------------------    -------------------
+
+
+
+
